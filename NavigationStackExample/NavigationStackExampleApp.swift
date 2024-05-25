@@ -11,7 +11,8 @@ import SwiftUI
 struct NavigationStackExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WelcomeView()
+                .modifier(DynamicEnvironmentModifier(keyPath: \.router, proxy: Router(path: NavigationPath())))
         }
     }
 }

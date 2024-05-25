@@ -8,17 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		5F09DF632BFB535E004720CB /* NavigationStackExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F09DF622BFB535E004720CB /* NavigationStackExampleApp.swift */; };
-		5F09DF652BFB535E004720CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F09DF642BFB535E004720CB /* ContentView.swift */; };
+		5F09DF652BFB535E004720CB /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F09DF642BFB535E004720CB /* WelcomeView.swift */; };
 		5F09DF672BFB5360004720CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F09DF662BFB5360004720CB /* Assets.xcassets */; };
 		5F09DF6A2BFB5360004720CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F09DF692BFB5360004720CB /* Preview Assets.xcassets */; };
+		5F09DF712BFBA962004720CB /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F09DF702BFBA962004720CB /* NavigationCoordinator.swift */; };
+		5F09DF732BFBADA4004720CB /* ViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F09DF722BFBADA4004720CB /* ViewContext.swift */; };
+		5F09DF772BFBAFEE004720CB /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F09DF762BFBAFEE004720CB /* RegisterView.swift */; };
+		5F1174AD2BFD408B000D5037 /* WelcomePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1174AC2BFD408B000D5037 /* WelcomePath.swift */; };
+		5F1174AF2BFD40B2000D5037 /* RegistrationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1174AE2BFD40B2000D5037 /* RegistrationPath.swift */; };
+		5F1174B12BFD40DB000D5037 /* SavePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1174B02BFD40DB000D5037 /* SavePoint.swift */; };
+		5F1174B42BFD4224000D5037 /* RegistrationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1174B32BFD4224000D5037 /* RegistrationContext.swift */; };
+		5F1174B62BFD499F000D5037 /* MainPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1174B52BFD499F000D5037 /* MainPath.swift */; };
+		5F1174B92BFD4A3C000D5037 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1174B82BFD4A3C000D5037 /* HomeView.swift */; };
+		5F1567432BFBE67300460781 /* RegisterFirstStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1567422BFBE67300460781 /* RegisterFirstStepView.swift */; };
+		5F1567452BFBE73500460781 /* RegisterSecondStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1567442BFBE73500460781 /* RegisterSecondStepView.swift */; };
+		5F1567472BFBE75D00460781 /* RegisterThirdStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1567462BFBE75D00460781 /* RegisterThirdStepView.swift */; };
+		5F1567492BFBE79200460781 /* RegisterFourthStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1567482BFBE79200460781 /* RegisterFourthStepView.swift */; };
+		5F15674C2BFCBE2800460781 /* Applicant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15674B2BFCBE2800460781 /* Applicant.swift */; };
+		5F15674F2BFCD5D700460781 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15674E2BFCD5D700460781 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5F09DF5F2BFB535E004720CB /* NavigationStackExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationStackExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F09DF622BFB535E004720CB /* NavigationStackExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackExampleApp.swift; sourceTree = "<group>"; };
-		5F09DF642BFB535E004720CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5F09DF642BFB535E004720CB /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		5F09DF662BFB5360004720CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F09DF692BFB5360004720CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5F09DF702BFBA962004720CB /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		5F09DF722BFBADA4004720CB /* ViewContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContext.swift; sourceTree = "<group>"; };
+		5F09DF762BFBAFEE004720CB /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		5F1174AC2BFD408B000D5037 /* WelcomePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePath.swift; sourceTree = "<group>"; };
+		5F1174AE2BFD40B2000D5037 /* RegistrationPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPath.swift; sourceTree = "<group>"; };
+		5F1174B02BFD40DB000D5037 /* SavePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePoint.swift; sourceTree = "<group>"; };
+		5F1174B32BFD4224000D5037 /* RegistrationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationContext.swift; sourceTree = "<group>"; };
+		5F1174B52BFD499F000D5037 /* MainPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPath.swift; sourceTree = "<group>"; };
+		5F1174B82BFD4A3C000D5037 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5F1567422BFBE67300460781 /* RegisterFirstStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirstStepView.swift; sourceTree = "<group>"; };
+		5F1567442BFBE73500460781 /* RegisterSecondStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSecondStepView.swift; sourceTree = "<group>"; };
+		5F1567462BFBE75D00460781 /* RegisterThirdStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterThirdStepView.swift; sourceTree = "<group>"; };
+		5F1567482BFBE79200460781 /* RegisterFourthStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFourthStepView.swift; sourceTree = "<group>"; };
+		5F15674B2BFCBE2800460781 /* Applicant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applicant.swift; sourceTree = "<group>"; };
+		5F15674E2BFCD5D700460781 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +82,12 @@
 			isa = PBXGroup;
 			children = (
 				5F09DF622BFB535E004720CB /* NavigationStackExampleApp.swift */,
-				5F09DF642BFB535E004720CB /* ContentView.swift */,
+				5F1174A92BFD4064000D5037 /* Coordinator */,
+				5F15674A2BFCBE1A00460781 /* Models */,
+				5F09DF782BFBE16A004720CB /* Views */,
 				5F09DF662BFB5360004720CB /* Assets.xcassets */,
 				5F09DF682BFB5360004720CB /* Preview Content */,
+				5F09DF722BFBADA4004720CB /* ViewContext.swift */,
 			);
 			path = NavigationStackExample;
 			sourceTree = "<group>";
@@ -65,6 +98,90 @@
 				5F09DF692BFB5360004720CB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5F09DF782BFBE16A004720CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5F09DF642BFB535E004720CB /* WelcomeView.swift */,
+				5F15674D2BFCD5C400460781 /* Login */,
+				5F09DF792BFBE4C1004720CB /* Register */,
+				5F1174B72BFD4A2D000D5037 /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5F09DF792BFBE4C1004720CB /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				5F1174B22BFD4218000D5037 /* Context */,
+				5F09DF762BFBAFEE004720CB /* RegisterView.swift */,
+				5F1567422BFBE67300460781 /* RegisterFirstStepView.swift */,
+				5F1567442BFBE73500460781 /* RegisterSecondStepView.swift */,
+				5F1567462BFBE75D00460781 /* RegisterThirdStepView.swift */,
+				5F1567482BFBE79200460781 /* RegisterFourthStepView.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		5F1174A92BFD4064000D5037 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5F09DF702BFBA962004720CB /* NavigationCoordinator.swift */,
+				5F1174B02BFD40DB000D5037 /* SavePoint.swift */,
+				5F1174AA2BFD4073000D5037 /* Path */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		5F1174AA2BFD4073000D5037 /* Path */ = {
+			isa = PBXGroup;
+			children = (
+				5F1174AC2BFD408B000D5037 /* WelcomePath.swift */,
+				5F1174B52BFD499F000D5037 /* MainPath.swift */,
+				5F1174AB2BFD407F000D5037 /* SubPath */,
+			);
+			path = Path;
+			sourceTree = "<group>";
+		};
+		5F1174AB2BFD407F000D5037 /* SubPath */ = {
+			isa = PBXGroup;
+			children = (
+				5F1174AE2BFD40B2000D5037 /* RegistrationPath.swift */,
+			);
+			path = SubPath;
+			sourceTree = "<group>";
+		};
+		5F1174B22BFD4218000D5037 /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				5F1174B32BFD4224000D5037 /* RegistrationContext.swift */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		5F1174B72BFD4A2D000D5037 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5F1174B82BFD4A3C000D5037 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5F15674A2BFCBE1A00460781 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F15674B2BFCBE2800460781 /* Applicant.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5F15674D2BFCD5C400460781 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5F15674E2BFCD5D700460781 /* LoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +254,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F09DF652BFB535E004720CB /* ContentView.swift in Sources */,
+				5F09DF732BFBADA4004720CB /* ViewContext.swift in Sources */,
+				5F09DF772BFBAFEE004720CB /* RegisterView.swift in Sources */,
+				5F1567432BFBE67300460781 /* RegisterFirstStepView.swift in Sources */,
+				5F09DF652BFB535E004720CB /* WelcomeView.swift in Sources */,
+				5F1567492BFBE79200460781 /* RegisterFourthStepView.swift in Sources */,
+				5F1174B92BFD4A3C000D5037 /* HomeView.swift in Sources */,
+				5F1174B42BFD4224000D5037 /* RegistrationContext.swift in Sources */,
+				5F1567452BFBE73500460781 /* RegisterSecondStepView.swift in Sources */,
+				5F1567472BFBE75D00460781 /* RegisterThirdStepView.swift in Sources */,
+				5F1174AD2BFD408B000D5037 /* WelcomePath.swift in Sources */,
+				5F09DF712BFBA962004720CB /* NavigationCoordinator.swift in Sources */,
+				5F1174AF2BFD40B2000D5037 /* RegistrationPath.swift in Sources */,
+				5F1174B62BFD499F000D5037 /* MainPath.swift in Sources */,
+				5F15674F2BFCD5D700460781 /* LoginView.swift in Sources */,
+				5F15674C2BFCBE2800460781 /* Applicant.swift in Sources */,
 				5F09DF632BFB535E004720CB /* NavigationStackExampleApp.swift in Sources */,
+				5F1174B12BFD40DB000D5037 /* SavePoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
