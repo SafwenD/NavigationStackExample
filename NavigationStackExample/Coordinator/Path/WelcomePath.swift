@@ -7,6 +7,17 @@
 
 import Foundation
 
-enum WelcomePath: Codable, Hashable {
+protocol PathComponent: Codable, Hashable  {
+    var id: String { get }
+}
+
+enum WelcomePath: PathComponent {
+    var id: String {
+        switch self {
+        case .login: "login"
+        case .registration: "registration"
+        }
+    }
+    
     case login, registration
 }

@@ -14,23 +14,23 @@ struct LoginView: View {
         VStack {
             TextField(text: $text) {
                 Text("Password")
-            }.padding(50)
+            }.textFieldStyle(.roundedBorder)
+            .padding(50)
             Button {
                 navigateToHome()
             } label: {
                 Text("Login")
-            }
-        }
-        // DOESNT WORK !!!!
-//        .navigationDestination(for: MainPath.self) { path in
-//            switch path {
-//            case .home: HomeView()
-//            }
-//        }
+            }.padding()
+                .background(Color.black)
+                .clipShape(RoundedRectangle(cornerSize: .init(width: 6, height: 6)))
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.pink.ignoresSafeArea())
+            .navigationBarTitleDisplayMode(.large)
+            .navigationTitle("Login")
     }
     
     func navigateToHome() {
-        router.path = NavigationPath([MainPath.home])
+        router.setFullPath(components: [MainPath.home])
     }
 }
 

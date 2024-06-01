@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct RegistrationSubPath: Codable, Hashable, Equatable {
+struct RegistrationSubPath: PathComponent {
+    var id: String { step.id }
     var step: RegisterStep
+}
+
+extension RegistrationSubPath: Equatable {
     static func == (lhs: RegistrationSubPath, rhs: RegistrationSubPath) -> Bool {
         lhs.step == rhs.step
     }

@@ -8,9 +8,20 @@
 import Foundation
 
 enum RegisterStep: Codable, Hashable {
+    case first, second, third(savePoint: Applicant? = nil), fourth
+}
+
+extension RegisterStep {
     static var count: Int { 4 }
     
-    case first, second, third(savePoint: Applicant? = nil), fourth
+    var id: String {
+        switch self {
+        case .first: "first"
+        case .second: "second"
+        case .third: "third"
+        case .fourth: "fourth"
+        }
+    }
 }
 
 struct Applicant: Codable, Hashable {

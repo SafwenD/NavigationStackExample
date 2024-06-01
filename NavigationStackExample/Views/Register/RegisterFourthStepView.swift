@@ -12,73 +12,60 @@ struct RegisterFourthStepView: View {
     @Environment(\.registrationContext) @Binding var registrationContext: RegistrationContext
     var body: some View {
         VStack {
-            Text("Step 4/4")
-                .padding()
             TextField(text: _registrationContext.wrappedValue.applicant.country) {
                 Text("Country")
-            }
+            }.textFieldStyle(.roundedBorder)
             .padding(50)
+            Spacer()
             Button(action: {
                 navigateToLogin()
             }, label: {
-                Text("Next")
+                Text("Finish")
             }).padding()
+                .background(Color.black)
+                .clipShape(RoundedRectangle(cornerSize: .init(width: 6, height: 6)))
             Button(action: {
                 navigateBack()
             }, label: {
-                Text("Back?")
+                Text("Back")
             }).padding()
+                .background(Color.black)
+                .clipShape(RoundedRectangle(cornerSize: .init(width: 6, height: 6)))
             Button(action: {
-                navigateBackToStep(number: 2)
+                navigateBackToStep()
             }, label: {
                 Text("Go Back to step 2")
             }).padding()
+                .background(Color.black)
+                .clipShape(RoundedRectangle(cornerSize: .init(width: 6, height: 6)))
             Button(action: {
-                router.path = NavigationPath()
+                router.popToRoot()
             }, label: {
                 Text("Go Back To Welcome")
             }).padding()
+                .background(Color.black)
+                .clipShape(RoundedRectangle(cornerSize: .init(width: 6, height: 6)))
             Spacer()
             Text(registrationContext.applicant.description)
-        }.navigationTitle("Registration 4/4")
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.green.ignoresSafeArea())
+            .navigationBarTitleDisplayMode(.large)
+            .navigationTitle("Registration 4/4")
     }
     
     func navigateBack() {
-        router.path.removeLast()
+        router.pop()
     }
     
-    func navigateBackToStep(number: Int) {
-        router.path.removeLast(RegisterStep.count - number)
+    func navigateBackToStep() {
+        router.pop(count: 2)
     }
     
     func navigateBackToWelcome() {
-        router.path = NavigationPath()
+        router.popToRoot()
     }
     
     func navigateToLogin() {
-        router.path = NavigationPath([WelcomePath.login])
+        router.setFullPath(components: [WelcomePath.login])
     }
 }
-
-//struct RegisterFourthStepView: View {
-//    @Binding var applicant: Applicant
-//    @Binding var stepsStack: [RegisterStep]
-//    var body: some View {
-//        VStack {
-//            Text("Step 4/4")
-//                .padding()
-//            TextField(text: $applicant.country) {
-//                Text("Country")
-//            }
-//            .padding(50)
-//            Button(action: {
-//                stepsStack = [.first, .second]
-//            }, label: {
-//                Text("Go Back to step 2")
-//            }).padding()
-//        }.onAppear {
-//            print("Applicant : \(applicant)")
-//        }
-//        Spacer()
-//    }
-//}

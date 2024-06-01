@@ -11,7 +11,7 @@ struct HomeView: View {
     @Environment(\.router) @Binding var router: Router
     var body: some View {
         ZStack {
-            Color.purple.ignoresSafeArea()
+            Color.orange.ignoresSafeArea()
             VStack {
                 Text("Welcome Back")
                 Button {
@@ -24,7 +24,7 @@ struct HomeView: View {
     }
     
     func navigateBackToWelcome() {
-        router.path = NavigationPath()
+        router.popToRoot()
     }
 }
 

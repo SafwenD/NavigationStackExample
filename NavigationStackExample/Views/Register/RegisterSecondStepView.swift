@@ -12,56 +12,38 @@ struct RegisterSecondStepView: View {
     @Environment(\.registrationContext) @Binding var registrationContext: RegistrationContext
     var body: some View {
         VStack {
-            Text("Step 2/4")
-                .padding()
             TextField(text: _registrationContext.wrappedValue.applicant.lastname) {
                 Text("LastName")
-            }
+            }.textFieldStyle(.roundedBorder)
             .padding(50)
+            Spacer()
             Button(action: {
                 navigateToNextView()
             }, label: {
-                Text("Go to step 3")
+                Text("Next")
             }).padding()
+                .background(Color.black)
+                .clipShape(RoundedRectangle(cornerSize: .init(width: 6, height: 6)))
             Button(action: {
                 navigateBack()
             }, label: {
-                Text("Back?")
+                Text("Back")
             }).padding()
+                .background(Color.black)
+                .clipShape(RoundedRectangle(cornerSize: .init(width: 6, height: 6)))
             Spacer()
             Text(registrationContext.applicant.description)
-        }.navigationTitle("Registration 2/4")
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.red.ignoresSafeArea())
+            .navigationBarTitleDisplayMode(.large)
+            .navigationTitle("Registration 2/4")
     }
     
     func navigateBack() {
-        router.path.removeLast()
+        router.pop()
     }
     
     func navigateToNextView() {
-        router.path.append(RegistrationSubPath(step: .third(savePoint: registrationContext.applicant)))
+        router.push(component: RegistrationSubPath(step: .third(savePoint: registrationContext.applicant)))
     }
 }
-
-//struct RegisterSecondStepView: View {
-//    @Binding var applicant: Applicant
-//    @Binding var stepsStack: [RegisterStep]
-//    @State var text: String = ""
-//    var body: some View {
-//        VStack {
-//            Text("Step 2/4")
-//                .padding()
-//            TextField(text: $applicant.lastname) {
-//                Text("LastName")
-//            }
-//            .padding(50)
-//            Button(action: {
-//                stepsStack.append(.third)
-//            }, label: {
-//                Text("Go to step 3")
-//            }).padding()
-//        }.onAppear {
-//            print("Applicant : \(applicant)")
-//        }
-//        Spacer()
-//    }
-//}

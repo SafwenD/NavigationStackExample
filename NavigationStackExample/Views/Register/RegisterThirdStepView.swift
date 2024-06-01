@@ -13,36 +13,46 @@ struct RegisterThirdStepView: View {
     var applicant: Applicant?
     var body: some View {
         VStack {
-            Text("Step 3/4")
-                .padding()
             TextField(text: _registrationContext.wrappedValue.applicant.age) {
                 Text("Age")
-            }
+            }.textFieldStyle(.roundedBorder)
             .padding(50)
+            Spacer()
             Button(action: {
                 navigateToNextView()
             }, label: {
-                Text("Go to step 4")
+                Text("Next")
             }).padding()
+                .background(Color.black)
+                .clipShape(RoundedRectangle(cornerSize: .init(width: 6, height: 6)))
             Button(action: {
                 navigateBack()
             }, label: {
-                Text("Back?")
+                Text("Back")
             }).padding()
+                .background(Color.black)
+                .clipShape(RoundedRectangle(cornerSize: .init(width: 6, height: 6)))
             Spacer()
             Button {
                 saveProgress()
             } label: {
                 Text("Save Progress")
-            }
+            }.padding()
+                .background(Color.black)
+                .clipShape(RoundedRectangle(cornerSize: .init(width: 6, height: 6)))
             Button {
                 clearProgress()
             } label: {
                 Text("Clear Progress")
-            }
+            }.padding()
+                .background(Color.black)
+                .clipShape(RoundedRectangle(cornerSize: .init(width: 6, height: 6)))
             Spacer()
             Text(registrationContext.applicant.description)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.purple.ignoresSafeArea())
+            .navigationBarTitleDisplayMode(.large)
         .navigationTitle("Registration 3/4")
         .onAppear {
             if let applicant {
@@ -52,42 +62,21 @@ struct RegisterThirdStepView: View {
     }
     
     func saveProgress() {
-        SavePoint.registration.save(path: router.path)
+        router.save(forKey: kRegistrationSavePointKey)
     }
     
     func clearProgress() {
-        SavePoint.registration.removeSave()
-        router.path = NavigationPath()
+        router.removeSave(forKey: kRegistrationSavePointKey)
+        router.popToRoot()
     }
     
     func navigateBack() {
-        router.path.removeLast()
+        router.pop()
     }
     
     func navigateToNextView() {
-        router.path.append(RegistrationSubPath(step: .fourth))
+        router.push(component: RegistrationSubPath(step: .fourth))
     }
 }
 
-//struct RegisterThirdStepView: View {
-//    @Binding var applicant: Applicant
-//    @Binding var stepsStack: [RegisterStep]
-//    var body: some View {
-//        VStack {
-//            Text("Step 3/4")
-//                .padding()
-//            TextField(text: $applicant.age) {
-//                Text("Age")
-//            }
-//            .padding(50)
-//            Button(action: {
-//                stepsStack.append(.fourth)
-//            }, label: {
-//                Text("Go to step 4")
-//            }).padding()
-//        }.onAppear {
-//            print("Applicant : \(applicant)")
-//        }
-//        Spacer()
-//    }
-//}
+

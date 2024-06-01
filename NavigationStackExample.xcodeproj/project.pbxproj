@@ -16,7 +16,6 @@
 		5F09DF772BFBAFEE004720CB /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F09DF762BFBAFEE004720CB /* RegisterView.swift */; };
 		5F1174AD2BFD408B000D5037 /* WelcomePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1174AC2BFD408B000D5037 /* WelcomePath.swift */; };
 		5F1174AF2BFD40B2000D5037 /* RegistrationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1174AE2BFD40B2000D5037 /* RegistrationPath.swift */; };
-		5F1174B12BFD40DB000D5037 /* SavePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1174B02BFD40DB000D5037 /* SavePoint.swift */; };
 		5F1174B42BFD4224000D5037 /* RegistrationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1174B32BFD4224000D5037 /* RegistrationContext.swift */; };
 		5F1174B62BFD499F000D5037 /* MainPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1174B52BFD499F000D5037 /* MainPath.swift */; };
 		5F1174B92BFD4A3C000D5037 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1174B82BFD4A3C000D5037 /* HomeView.swift */; };
@@ -39,7 +38,6 @@
 		5F09DF762BFBAFEE004720CB /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		5F1174AC2BFD408B000D5037 /* WelcomePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePath.swift; sourceTree = "<group>"; };
 		5F1174AE2BFD40B2000D5037 /* RegistrationPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPath.swift; sourceTree = "<group>"; };
-		5F1174B02BFD40DB000D5037 /* SavePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePoint.swift; sourceTree = "<group>"; };
 		5F1174B32BFD4224000D5037 /* RegistrationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationContext.swift; sourceTree = "<group>"; };
 		5F1174B52BFD499F000D5037 /* MainPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPath.swift; sourceTree = "<group>"; };
 		5F1174B82BFD4A3C000D5037 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				5F09DF702BFBA962004720CB /* NavigationCoordinator.swift */,
-				5F1174B02BFD40DB000D5037 /* SavePoint.swift */,
 				5F1174AA2BFD4073000D5037 /* Path */,
 			);
 			path = Coordinator;
@@ -270,7 +267,6 @@
 				5F15674F2BFCD5D700460781 /* LoginView.swift in Sources */,
 				5F15674C2BFCBE2800460781 /* Applicant.swift in Sources */,
 				5F09DF632BFB535E004720CB /* NavigationStackExampleApp.swift in Sources */,
-				5F1174B12BFD40DB000D5037 /* SavePoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,20 +7,26 @@
 
 import SwiftUI
 
+let kRegistrationSavePointKey = "registration"
+
 struct RegisterView: View {
     @Environment(\.router) @Binding var router: Router
     @Environment(\.registrationContext) @Binding var registrationContext: RegistrationContext
     var body: some View {
         VStack {
-            Text("Registration !")
-                .padding()
             Button {
-                router.path.append(RegistrationSubPath(step: .first))
+                router.push(component: RegistrationSubPath(step: .first))
             } label: {
-                Text("Start ...")
-            }
+                Text("Start")
+                    .foregroundStyle(.white)
+            }.padding()
+                .background(Color.black)
+                .clipShape(RoundedRectangle(cornerSize: .init(width: 6, height: 6)))
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.cyan.ignoresSafeArea())
         .navigationTitle("Registration")
+        .navigationBarTitleDisplayMode(.large)
         .navigationDestination(for: RegistrationSubPath.self) { path in
             switch path.step {
             case .first: RegisterFirstStepView()
@@ -32,28 +38,6 @@ struct RegisterView: View {
     }
 }
 
-//struct RegisterView: View {
-//    
-//    @State var stepsStack: [RegisterStep] = []
-//    @State var applicant: Applicant = .init()
-//    
-//    var body: some View {
-//        NavigationStack(path: $stepsStack) {
-//            VStack {
-//                Text("Registration !")
-//                    .padding()
-//                NavigationLink("Start ...", value: RegisterStep.first)
-//            }.navigationDestination(for: RegisterStep.self) { step in
-//                switch step {
-//                case .first: RegisterFirstStepView(applicant: $applicant, stepsStack: $stepsStack)
-//                case .second: RegisterSecondStepView(applicant: $applicant, stepsStack: $stepsStack)
-//                case .third: RegisterThirdStepView(applicant: $applicant, stepsStack: $stepsStack)
-//                case .fourth: RegisterFourthStepView(applicant: $applicant, stepsStack: $stepsStack)
-//                }
-//            }
-//        }
-//    }
-//}
 
 #Preview {
     RegisterView()

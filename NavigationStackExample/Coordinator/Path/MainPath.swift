@@ -7,6 +7,12 @@
 
 import Foundation
 
-enum MainPath: Codable, Hashable {
+enum MainPath: PathComponent {
+    var id: String {
+        switch self {
+        case .home: "home"
+        }
+    }
+    
     case home
 }

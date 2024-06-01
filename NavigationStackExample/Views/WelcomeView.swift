@@ -12,11 +12,6 @@ struct WelcomeView: View {
     var body: some View {
         NavigationStack(path: _router.wrappedValue.path) {
             VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
-                    .padding(.bottom, 100)
                 Button(action: {
                     navigateToLogin()
                 }, label: {
@@ -54,16 +49,15 @@ struct WelcomeView: View {
     }
     
     func navigateToLogin() {
-        router.path.append(WelcomePath.login)
+        router.push(component: WelcomePath.login)
     }
     
     func navigateToRegistration() {
-        router.path.append(WelcomePath.registration)
+        router.push(component: WelcomePath.registration)
     }
     
     func navigateToSavePoint() {
-        guard let path = SavePoint.registration.load() else { return }
-        router.path = path
+        router.load(forKey: kRegistrationSavePointKey)
     }
 }
 
